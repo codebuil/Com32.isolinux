@@ -4,6 +4,7 @@ extern kernel_main
 _starts:
 	
 	call kernel_main
+	ret
 haltss:
     jmp haltss
 MODULEALIGN       equ     1<<0

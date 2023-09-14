@@ -12,6 +12,7 @@ cp *.jpg CD_root/isolinux/
 cp *.menu CD_root/isolinux/
 cp *.txt CD_root/isolinux/
 nasm -felf32 -o boot.o boot.S
+nasm -o hello.com hello.asm
 gcc -c kernel.c -o kernel.o -nostdlib
 gcc link.ld boot.o kernel.o -o kernel.elf -nostdlib
 nasm model.asm -o model.o
